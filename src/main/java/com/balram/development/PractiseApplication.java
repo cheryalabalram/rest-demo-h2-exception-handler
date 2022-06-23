@@ -29,13 +29,13 @@ public class PractiseApplication {
 			Instant start = Instant.now();
 			loop();
 			Instant end = Instant.now();
-			System.out.println("Ended in seconds " + Duration.between(start, end).toSeconds());
+			System.out.println("Ended in seconds " + Duration.between(start, end).getSeconds());
 		};
 	}
 	
 	private void loop(){
 		for(int i=0; i < 200000; i++) {
-			System.out.println("Preloading " + repository.save(new Employee("Examine", "Developer" + i)));
+//			System.out.println("Preloading " + repository.save(new Employee("Examine", "Developer" + i)));
 			System.out.println(" Persormance : "+ performanceRepo.save(new SupplierItemIdentifier("buType"+i,"b"+i,"c"+i,"d"+i,"e"+i)));
 		}
 	}

@@ -8,17 +8,15 @@ import javax.persistence.Table;
 
 import org.springframework.data.domain.Persistable;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Entity
 @Table(name = "PARENT_TABLE")
-@Getter @Setter @ToString @NoArgsConstructor @EqualsAndHashCode @AllArgsConstructor @Builder
+@Getter @Setter @ToString @EqualsAndHashCode @Builder
 @IdClass(SupplierItemIdentifierId.class)
 public class SupplierItemIdentifier implements Persistable<SupplierItemIdentifierId> {
 
