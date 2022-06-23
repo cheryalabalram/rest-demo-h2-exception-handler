@@ -15,8 +15,16 @@ public class PractiseApplication {
 	CommandLineRunner initDatabase() {
 
 		return args -> {
+<<<<<<< Updated upstream
 			System.out.println("Preloading " + repository.save(new Employee("Balram", "Cheryala")));
 			System.out.println("Preloading " + repository.save(new Employee("Examine", "Developer")));
+=======
+			System.out.println("Started");
+			Instant start = Instant.now();
+			loop();
+			Instant end = Instant.now();
+			System.out.println("Ended in seconds " + Duration.between(start, end).getSeconds());
+>>>>>>> Stashed changes
 		};
 	}
 
